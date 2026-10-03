@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Academia de Ciências Exatas</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<header>
+  <div class="logo">🎓 ACADEMIA <span>CIÊNCIAS EXATAS</span></div>
+  <div class="slogan">do fundamento à fronteira da ciência</div>
+  <nav>
+    <button data-view="diag" class="active">📋 Diagnóstico</button>
+    <button data-view="map">🗺 Mapa</button>
+    <button data-view="trail">🧭 Trilha</button>
+    <button data-view="aulas">📚 Aulas</button>
+    <button data-view="review">🔁 Revisão</button>
+    <button data-view="sobre">◈ Sobre</button>
+  </nav>
+</header>
+<main id="main">
+  <section id="view-diag" class="view active">
+    <div class="card intro" id="diagIntro">
+      <h2>Diagnóstico progressivo</h2>
+      <p>Avaliação em escada: 5 blocos (Matemática, Física, Química, Computação, Pensamento científico). Responda em ordem; quando não souber, peça uma <b>pista</b> (pista 1, pista 2, solução). Acertar sozinho vale mais do que acertar com pista — o sistema mede isso.</p>
+      <p class="muted">Regras: sem consultas externas, sem calculadora nas questões [MC]. Onde você para é dado de diagnóstico.</p>
+      <button class="btn" id="startDiag">Começar diagnóstico ▸</button>
+      <div id="diagResume"></div>
+    </div>
+    <div id="diagArea" class="hidden"></div>
+  </section>
+
+  <section id="view-map" class="view">
+    <h2>Mapa de conhecimento</h2>
+    <div class="card" id="mapIntro">Complete o diagnóstico para gerar seu mapa com nível de domínio (0–6) por assunto.</div>
+    <div id="mapArea"></div>
+  </section>
+
+  <section id="view-trail" class="view">
+    <h2>Trilha até a fronteira</h2>
+    <div class="card muted">Árvore de pré-requisitos até seus temas-alvo: matéria escura, energia escura, cosmologia, relatividade, quântica. Uma etapa abre quando os pré-requisitos atingem nível 3 (aplicação). <b>Nada é pulado; nada é repetido sem necessidade.</b></div>
+    <div id="trailArea"></div>
+  </section>
+
+  <section id="view-aulas" class="view">
+    <h2>Aulas</h2>
+    <div id="aulasArea"></div>
+  </section>
+
+  <section id="view-review" class="view">
+    <h2>Revisão espaçada</h2>
+    <div class="card" id="reviewInfo"></div>
+    <div id="reviewArea"></div>
+  </section>
+
+  <section id="view-sobre" class="view">
+    <h2>Sobre a Academia</h2>
+    <div class="card">
+      <p><b>Método:</b> intuição → formalização → derivação → demonstração → aplicação → problema novo → dados → literatura → pesquisa.</p>
+      <p><b>Domínio 0–6:</b> 0 desconhecido · 1 reconhecimento · 2 compreensão · 3 aplicação · 4 domínio · 5 capaz de ensinar · 6 capaz de usar em pesquisa.</p>
+      <p><b>Honestidade:</b> o app diagnostica e treina; nada aqui marca um problema aberto como resolvido. O professor (o assistente no chat) continua sendo o orientador principal — tragam as dúvidas para ele.</p>
+      <p class="muted">Progresso salvo localmente no seu aparelho. Feito para Samuel Batista. v1.0</p>
+    </div>
+  </section>
+</main>
+<div id="toast"></div>
+<script src="app.js"></script>
+</body>
+</html>
